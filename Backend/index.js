@@ -14,6 +14,10 @@ const userRoutes = require('./routes/userRoutes');
 const app = express();
 const server = http.createServer(app);
 
+app.use(cors({
+  origin: ["https://real-time-insta-chat-application.vercel.app/"],
+  credentials: true
+}));
 // Connect to DB
 connectDB();
 
